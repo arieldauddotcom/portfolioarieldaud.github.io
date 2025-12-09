@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Footer E-PKL</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Arial", sans-serif;
+        }
+
+        .footer {
+            background: #0a3d62;
+            color: #ffffff;
+            padding: 25px 10px;
+            text-align: center;
+        }
+
+        .footer .title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .footer .school {
+            letter-spacing: 0.5px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .footer .info {
+            margin-top: 12px;
+            font-size: 14px;
+            opacity: 0.85;
+        }
+
+        .footer a {
+            color: #f1c40f;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .divider {
+            width: 80%;
+            margin: 15px auto;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .copyright {
+            font-size: 13px;
+            opacity: 0.8;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="footer">
+        <div class="title">Sistem Informasi</div>
+        <div class="school">E-PKL SMKN 1 GORONTALO</div>
+
+        <div class="info">
+            Platform Monitoring & Manajemen Praktik Kerja Lapangan<br>
+            Dikembangkan oleh <a href="https://arieldaud.com" target="_blank">Ariel Daud</a>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="copyright">
+            © <span id="year"></span> E-PKL SMKN 1 Gorontalo — All Rights Reserved.
+        </div>
+    </div>
+
+    <script>
+        // Auto update tahun
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
