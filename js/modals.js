@@ -50,16 +50,37 @@ window.addEventListener('DOMContentLoaded', () => {
       const imgSrc = trigger.getAttribute('data-img-src') || 'img/07 1.png';
 
       modalBody.innerHTML = `
-        <div style="padding: 1.25rem; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between;">
-          <div>
-            <h4 style="font-size: 1.2rem; font-weight: 800; color: var(--text-primary);">1st Most Interactive Winner Certificate</h4>
-            <p style="font-size: 0.85rem; color: var(--text-secondary);">Spark AR Competition 2021 · Hacktiv8</p>
+        <div style="padding: 1.25rem 3.5rem 1.25rem 1.5rem; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.85rem;">
+            <div style="width: 44px; height: 44px; border-radius: var(--radius-md); background: rgba(245, 158, 11, 0.15); color: #F59E0B; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0; border: 1px solid rgba(245, 158, 11, 0.3);">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <div>
+              <h4 style="font-size: 1.15rem; font-weight: 800; color: var(--text-primary); margin: 0;">1st Most Interactive Winner</h4>
+              <p style="font-size: 0.85rem; color: var(--text-secondary); margin: 0.2rem 0 0 0;">National Spark AR Competition · Hacktiv8 Indonesia</p>
+            </div>
           </div>
-          <a href="${pdfSrc}" target="_blank" class="btn-primary" style="font-size: 0.825rem; padding: 0.5rem 1rem;">Open Original PDF ↗</a>
+          <div>
+            <a href="${pdfSrc}" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size: 0.85rem; padding: 0.55rem 1.1rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+              <i class="fa-solid fa-file-pdf"></i> Open Original PDF <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
+            </a>
+          </div>
         </div>
-        <div style="padding: 1.5rem; text-align: center; max-height: 75vh; overflow-y: auto;">
-          <img src="${imgSrc}" alt="Spark AR Competition Winner Certificate" style="max-width: 100%; height: auto; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
-          <img src="img/Frame 2 (12).png" alt="Spark AR Competition Certificate Detail" style="max-width: 100%; height: auto; border-radius: var(--radius-md); border: 1px solid var(--border-color); margin-top: 1rem;">
+
+        <div style="padding: 1.5rem; max-height: 75vh; overflow-y: auto; display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
+          <div style="width: 100%; max-width: 820px; background: var(--bg-card); padding: 0.75rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color); box-shadow: var(--shadow-md);">
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: var(--accent-purple); text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.05em;">
+              // Official Winner Certificate
+            </div>
+            <img src="${imgSrc}" alt="Spark AR Competition Winner Certificate - Ariel Daud" style="width: 100%; height: auto; border-radius: var(--radius-md); display: block; border: 1px solid var(--border-subtle);">
+          </div>
+          
+          <div style="width: 100%; max-width: 820px; background: var(--bg-card); padding: 0.75rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color); box-shadow: var(--shadow-md);">
+            <div style="font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; color: #F59E0B; text-transform: uppercase; margin-bottom: 0.5rem; letter-spacing: 0.05em;">
+              // Competition Winner Showcase & Details
+            </div>
+            <img src="img/Frame 2 (12).png" alt="Spark AR Competition Winner Announcement & Details" style="width: 100%; height: auto; border-radius: var(--radius-md); display: block; border: 1px solid var(--border-subtle);">
+          </div>
         </div>
       `;
       modalOverlay.classList.add('open');
