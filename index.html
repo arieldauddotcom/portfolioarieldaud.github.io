@@ -163,9 +163,26 @@
         <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light and dark theme">
           <i id="theme-icon" class="fa-solid fa-moon"></i>
         </button>
-        <a href="https://github.com/arieldaud" target="_blank" rel="noopener noreferrer" class="nav-btn-external">
-          <span>GitHub</span> <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.75rem;"></i>
+        <!-- tombol contact me direce ke wa kecilkan sedikit, tanpa text hanya icon, framnya jangan rounded bulat aja seperti toggle theme tapi lebih ke oval -->
+         <style>
+           .contact-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all 0.3s ease;
+           }
+         </style>
+        <a href="https://wa.me/62895619486004" target="_blank" rel="noopener noreferrer" class="contact-btn" style="font-size: 1.1rem;">
+          <i class="fa-brands fa-whatsapp"></i>   
         </a>
+
         <button id="mobile-toggle" class="mobile-toggle" aria-label="Open Mobile Menu">
           <i class="fa-solid fa-bars"></i>
         </button>
@@ -178,7 +195,7 @@
   <aside id="mobile-drawer" class="mobile-drawer">
     <div>
       <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem;">
-        <span class="brand-logo">ARIEL DAUD</span>
+        <span class="brand-logo">ARIELDAUD.COM</span>
       </div>
       <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.25rem;">
         <li><a href="#creative" class="nav-link drawer-link" style="font-size: 1.1rem;">AR Filters</a></li>
@@ -190,9 +207,7 @@
       </ul>
     </div>
     <div style="padding-top: 2rem; border-top: 1px solid var(--border-color);">
-      <a href="https://github.com/arieldaud" target="_blank" rel="noopener noreferrer" class="btn-primary" style="width: 100%;">
-        <i class="fa-brands fa-github"></i> GitHub Profile
-      </a>
+  
     </div>
   </aside>
 
@@ -205,10 +220,10 @@
             <i class="fa-solid fa-wand-magic-sparkles" style="font-size: 0.8rem;"></i> AR TIKTOK DEVELOPER · EFFECT HOUSE SPECIALIST · CREATIVE TECHNOLOGIST
           </div>
           <h1 class="hero-title">
-            I craft viral AR filters, interactive <span>Effect House experiences,</span> and custom digital products.
+            I craft viral TikTok AR experiences, <span>interactive game filters,</span> and modern digital systems.
           </h1>
           <p class="hero-subtitle">
-            I'm Ariel Daud, a leading AR TikTok Developer & Creative Technologist from Indonesia. 1st Winner of Spark AR Competition, specializing in TikTok Effect House, interactive AR game filters, brand campaigns, and workflow automation.
+            I'm Ariel Daud, an award-winning AR Developer & Creative Technologist from Indonesia (1st Winner Spark AR Competition). Trusted by top brands to build viral TikTok Effect House games, full-stack web applications (Laravel & PHP), Linux server infrastructure, and n8n workflow automations.
           </p>
           <div class="hero-ctas">
             <a href="#creative" class="btn-primary">
@@ -782,7 +797,7 @@
       <div class="about-grid">
         <div class="reveal">
           <div class="about-image-wrapper">
-            <img src="img/rap2.jpg" alt="Ariel Daud Portrait" class="about-image" />
+            <img src="img/fxn 2025-12-23 114619.784.jpg" alt="Ariel Daud Portrait" class="about-image" />
           </div>
         </div>
 
@@ -1044,9 +1059,7 @@
           <a href="https://www.instagram.com/arieldaud/" target="_blank" rel="noopener noreferrer" class="contact-btn">
             <i class="fa-brands fa-instagram"></i> Instagram (@arieldaud)
           </a>
-          <a href="https://github.com/arieldaud" target="_blank" rel="noopener noreferrer" class="contact-btn">
-            <i class="fa-brands fa-github"></i> GitHub
-          </a>
+        
         </div>
       </div>
     </div>
