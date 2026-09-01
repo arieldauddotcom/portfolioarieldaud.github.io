@@ -1456,7 +1456,7 @@ button {
 }
 
 /* ==========================================================================
-   Responsive Breakpoints
+   Responsive Breakpoints & Mobile Optimization
    ========================================================================== */
 @media (max-width: 1024px) {
   .hero-grid, .project-block, .about-grid, .recognition-card {
@@ -1469,53 +1469,242 @@ button {
   }
   
   .expertise-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  .container {
+    padding: 0 1.25rem;
+  }
+
   .nav-links, .nav-btn-external {
     display: none;
   }
   
   .mobile-toggle {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .hero-title {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 6vw, 2.5rem);
+    line-height: 1.2;
   }
-  
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .hero-image-wrapper {
+    max-width: 300px;
+    margin: 1.5rem auto 0;
+  }
+
+  .creative-grid {
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.25rem;
+  }
+
   .project-block {
-    padding: 1.75rem;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .project-title {
+    font-size: 1.35rem;
+  }
+
+  .expertise-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .expertise-card {
+    padding: 1.5rem;
   }
   
   .recognition-card {
-    padding: 2rem;
+    padding: 1.75rem;
   }
   
   .currently-grid {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
 
-  .hero-image-wrapper {
-    max-width: 320px;
-    margin-top: 1.5rem;
+  .timeline {
+    padding-left: 1.75rem;
   }
-  
+
+  .timeline-item {
+    margin-bottom: 2.25rem;
+  }
+
+  .timeline-node {
+    left: -1.75rem;
+    width: 14px;
+    height: 14px;
+  }
+
   .badge-trophy {
     top: -10px;
     right: -10px;
-    padding: 0.5rem 0.75rem;
+    padding: 0.45rem 0.7rem;
+    font-size: 0.75rem;
   }
   
   .badge-ar {
-    bottom: -15px;
+    bottom: -12px;
     left: -10px;
-    padding: 0.5rem 0.75rem;
+    padding: 0.45rem 0.7rem;
+    font-size: 0.75rem;
   }
   
   .badge-tech {
     display: none;
+  }
+
+  .modal-overlay {
+    padding: 1rem;
+  }
+
+  .modal-container {
+    width: 100%;
+    max-height: 92vh;
+  }
+}
+
+@media (max-width: 540px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .navbar {
+    padding: 0.75rem 0;
+  }
+
+  .brand-logo {
+    font-size: 1.1rem;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+
+  .hero-title {
+    font-size: 1.85rem;
+    line-height: 1.22;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .hero-ctas .btn-primary,
+  .hero-ctas .btn-secondary {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .creative-filter-tabs {
+    gap: 0.4rem;
+    justify-content: center;
+  }
+
+  .filter-tab-btn {
+    font-size: 0.78rem;
+    padding: 0.4rem 0.75rem;
+  }
+
+  .creative-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .creative-video-wrapper {
+    max-height: 420px;
+  }
+
+  .project-block {
+    padding: 1.25rem;
+  }
+
+  .project-visual {
+    padding: 1rem;
+    overflow-x: auto;
+  }
+
+  .project-visual pre {
+    font-size: 0.7rem;
+    word-break: break-all;
+    white-space: pre-wrap;
+  }
+
+  .about-image-wrapper {
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  .recognition-card {
+    padding: 1.25rem;
+  }
+
+  .recognition-title {
+    font-size: 1.5rem;
+  }
+
+  .contact-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .contact-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .modal-overlay {
+    padding: 0.5rem;
+  }
+
+  .modal-close-btn {
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 34px;
+    height: 34px;
+    font-size: 1.1rem;
+  }
+
+  #cert-view-pdf iframe {
+    height: 380px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand-badge {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 1.65rem;
+  }
+
+  .hero-image-wrapper {
+    max-width: 240px;
   }
 }
