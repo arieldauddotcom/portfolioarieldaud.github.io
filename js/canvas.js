@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Core Nodes prioritizing AR TikTok Developer & Effect House
   const nodes = [
-    { label: 'TIKTOK EFFECT HOUSE', sub: 'TypeScript & Game Logic', x: 0.35, y: 0.32, vx: 0.2, vy: 0.15, radius: 28, color: '#7C3AED' },
+    { label: 'TIKTOK EFFECT HOUSE', sub: 'Visual Scripting & Game Logic', x: 0.35, y: 0.32, vx: 0.2, vy: 0.15, radius: 28, color: '#7C3AED' },
     { label: 'SPARK AR & FILTERS', sub: 'Winner 1st Interactive AR', x: 0.72, y: 0.35, vx: -0.15, vy: 0.2, radius: 26, color: '#8B5CF6' },
     { label: 'BRAND AR CAMPAIGNS', sub: 'Ultra Milk / Infinix / Implora', x: 0.3, y: 0.72, vx: 0.18, vy: -0.12, radius: 25, color: '#EC4899' },
     { label: 'WEB & AUTOMATION', sub: 'n8n / Next.js / Docker', x: 0.75, y: 0.75, vx: -0.2, vy: -0.18, radius: 24, color: '#6366F1' }
