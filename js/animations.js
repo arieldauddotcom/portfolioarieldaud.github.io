@@ -81,17 +81,62 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Video hover auto-play
+  // Intelligent Video Viewport Autoplay (Mobile & Desktop)
+  const videos = document.querySelectorAll('.creative-video');
+
+  const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const video = entry.target;
+      if (entry.isIntersecting) {
+        video.muted = true;
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {
+            // Handled gracefully if browser policy delays autoplay
+          });
+        }
+      } else {
+        video.pause();
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  videos.forEach(video => {
+    video.muted = true;
+    videoObserver.observe(video);
+  });
+
+  // Desktop Hover Additional Trigger
   document.querySelectorAll('.creative-video-wrapper').forEach(wrapper => {
     const video = wrapper.querySelector('video');
     if (!video) return;
 
     wrapper.addEventListener('mouseenter', () => {
+      video.muted = true;
       video.play().catch(() => {});
     });
 
     wrapper.addEventListener('mouseleave', () => {
-      video.pause();
+      // Optional: keep playing or pause based on visibility
     });
   });
+
+  // Unlock Autoplay on First User Touch/Scroll (iOS Low Power & Mobile Safari Compatibility)
+  function unlockAutoplay() {
+    videos.forEach(video => {
+      const rect = video.getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+      if (isVisible && video.paused) {
+        video.muted = true;
+        video.play().catch(() => {});
+      }
+    });
+    window.removeEventListener('touchstart', unlockAutoplay);
+    window.removeEventListener('scroll', unlockAutoplay);
+  }
+
+  window.addEventListener('touchstart', unlockAutoplay, { passive: true, once: true });
+  window.addEventListener('scroll', unlockAutoplay, { passive: true, once: true });
 });
