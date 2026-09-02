@@ -1106,7 +1106,6 @@ button {
   position: relative;
   width: 100%;
   aspect-ratio: 9 / 16;
-  max-height: 420px;
   background-color: #000000;
   overflow: hidden;
   cursor: pointer;
@@ -1633,10 +1632,6 @@ button {
   .creative-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-  }
-
-  .creative-video-wrapper {
-    max-height: 420px;
   }
 
   .project-block {
